@@ -23,7 +23,7 @@ public class AddAudioTrack extends ModuleBase
 		@Override
 		public void onPublish(IMediaStream stream, String streamName, boolean isRecord, boolean isAppend)
 		{
-			if (!streamName.contains("-audiodestin") && !streamName.contains("-audiosource"))
+			if (!streamName.contains("-audiodestin") && !streamName.contains("-audiosource") && !stream.isTranscodeResult())
 			{
 				synchronized(workers)
 				{
